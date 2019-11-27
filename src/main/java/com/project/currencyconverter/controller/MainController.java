@@ -1,6 +1,6 @@
 package com.project.currencyconverter.controller;
 
-import com.project.currencyconverter.model.AvailableCurrencies;
+import com.project.currencyconverter.model.DTO.AvailableCurrencies;
 import com.project.currencyconverter.model.DTO.CalculateDTO;
 import com.project.currencyconverter.service.CalculateService;
 import com.project.currencyconverter.service.NbpApi;
@@ -19,16 +19,12 @@ public class MainController {
     @Autowired
     private NbpApi nbpApi;
 
-    @Autowired
-    private DefaultCustomLog defaultCustomLog;
 
     @GetMapping(value = "/calculate", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<CalculateDTO> calculateCurrency(
             @RequestParam(value = "amount") float amount,
             @RequestParam(value = "from") String from,
             @RequestParam(value = "to") String to){
-
-//        defaultCustomLog.addParamLog(amount, from, to);
 
         return ResponseEntity.ok(calculateService.calculate(amount, from, to));
     }

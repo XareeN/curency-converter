@@ -1,5 +1,6 @@
 package com.project.currencyconverter.model;
 
+import com.project.currencyconverter.model.DTO.Params;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

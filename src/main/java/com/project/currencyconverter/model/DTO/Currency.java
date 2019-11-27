@@ -1,4 +1,4 @@
-package com.project.currencyconverter.model;
+package com.project.currencyconverter.model.DTO;
 
 public class Currency {
 

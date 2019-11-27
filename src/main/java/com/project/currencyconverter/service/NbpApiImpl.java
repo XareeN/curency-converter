@@ -1,8 +1,8 @@
 package com.project.currencyconverter.service;
 
 import com.project.currencyconverter.controller.DefaultCustomLog;
-import com.project.currencyconverter.model.AvailableCurrencies;
-import com.project.currencyconverter.model.SingleCurrency;
+import com.project.currencyconverter.model.DTO.AvailableCurrencies;
+import com.project.currencyconverter.model.DTO.SingleCurrency;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
