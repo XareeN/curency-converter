@@ -1,6 +1,5 @@
 package com.project.currencyconverter.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AvailableCurrencies {
