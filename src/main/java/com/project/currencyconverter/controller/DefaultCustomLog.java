@@ -24,16 +24,27 @@ public class DefaultCustomLog {
         customLogRepository.save(customLog);
     }
 
-    public void addParamLog(float amount, String from, String to){
+//    public void addParamLog(float amount, String from, String to){
+//
+//        String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(Calendar.getInstance().getTime());
+//        Params params = new Params(String.valueOf(amount), from, to);
+//        List<Params> paramList = new ArrayList<Params>();
+//        paramList.add(params);
+//        CustomLog customLog = new CustomLog(
+//                timeStamp,
+//                "addParamLog",
+//                paramList
+//        );
+//        customLogRepository.save(customLog);
+//    }
+
+    public void addParamLogShort(String param){
 
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(Calendar.getInstance().getTime());
-        Params params = new Params(String.valueOf(amount), from, to);
-        List<Params> paramList = new ArrayList<Params>();
-        paramList.add(params);
         CustomLog customLog = new CustomLog(
                 timeStamp,
-                "com.project.currencyconverter.controller.Calculate",
-                paramList
+                "addParamLogShort",
+                param
         );
         customLogRepository.save(customLog);
     }

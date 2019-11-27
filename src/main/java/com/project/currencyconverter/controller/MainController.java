@@ -28,20 +28,17 @@ public class MainController {
             @RequestParam(value = "from") String from,
             @RequestParam(value = "to") String to){
 
-        defaultCustomLog.addParamLog(amount, from, to);
+//        defaultCustomLog.addParamLog(amount, from, to);
 
         return ResponseEntity.ok(calculateService.calculate(amount, from, to));
     }
 
     @GetMapping(value = "/currencies", produces = MediaType.APPLICATION_JSON_VALUE)
-    public AvailableCurrencies[] showCurrencies(){
+    public ResponseEntity<AvailableCurrencies[]> showCurrencies(){
 
         AvailableCurrencies[] availableCurrencies = nbpApi.getCurrencies();
 
-
-        defaultCustomLog.addLog("com.project.currencyconverter.controller.Currencies");
-
-        return availableCurrencies;
+        return ResponseEntity.ok(availableCurrencies);
     }
 
 }

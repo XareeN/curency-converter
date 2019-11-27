@@ -7,7 +7,6 @@ import com.project.currencyconverter.model.SingleCurrency;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 public class CalculateServiceImpl implements CalculateService {
@@ -18,7 +17,6 @@ public class CalculateServiceImpl implements CalculateService {
     @Override
     public CalculateDTO calculate(float amount, String from, String to) {
 
-        RestTemplate restTemplate = new RestTemplate();
         try{
             SingleCurrency exchangeFrom = nbpApi.getRates(from);
             SingleCurrency exchangeTo = nbpApi.getRates(to);

@@ -13,6 +13,7 @@ public class CustomLog {
     private String date;
     private String className;
     private List<Params> params;
+    private String param;
 
     public CustomLog(String date, String className, List<Params> params) {
         this.date = date;
@@ -25,6 +26,11 @@ public class CustomLog {
         this.className = className;
     }
 
+    public CustomLog(String date, String className, String param) {
+        this.date = date;
+        this.className = className;
+        this.param = param;
+    }
 
     public String getId() {
         return id;
@@ -56,5 +62,13 @@ public class CustomLog {
 
     public void setParams(List<Params> params) {
         this.params = params;
+    }
+
+    public String getParam() {
+        return param;
+    }
+
+    public void setParam(String param) {
+        this.param = param;
     }
 }
